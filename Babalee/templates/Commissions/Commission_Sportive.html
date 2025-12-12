@@ -1,0 +1,70 @@
+{% extends "Babalee/base.html" %}
+{% block title %}Commission Sportive{% endblock %}
+
+{% block content %}
+<!-- SECTION HERO -->
+<div class="commission-hero d-flex flex-column justify-content-center align-items-center text-center">
+    <h2 class="com-inity">Commission Sportive</h2>
+    <p class="commission-text">
+       La commission sportive de l’ASEGUIM Meknès met l’énergie au service des étudiants ! Au programme : tournois de football et de basketball, entraînements réguliers et rencontres sportives pour allier passion, compétition et esprit d’équipe. Que tu sois débutant ou confirmé, viens shooter, dribbler et marquer des buts avec nous — le terrain est à toi !
+    </p>
+</div>
+<!-- SECTION com -->
+<div class="commission-com d-flex flex-column justify-content-center align-items-center text-center">
+   <br> <h4 class="titreapropos text-center"> Notre ambition </h4>
+    <p class="commission-com-text">
+        Offrir aux Aseguimiens de Meknès un cadre favorable à leur plein épanouissement."</p>
+</div><br>
+ <h4 class="titrebureau text-center "> Nos Initiatives </h4>
+<br>
+ <div class="container my-5 justify-content-center">
+    <div class="row g-4">
+
+        <!-- Bloc 1 -->
+        <div class="col-12 col-md-4">
+            <div class="home-card text-center p-4">
+                <h4 class="fw-bold mb-2">Événements Sportifs</h4>
+                <p class="para text-muted"> Nous Organisation tout au long de l'année des matchs amicaux, et journées sportives pour rassembler et motiver les étudiants autour de la passion du sport.</p>
+               <a href="{% url 'Evenement_Sportif'%}" class="btn btn-outline-success btn-lg mb-1">Voir nos evenements</a>
+            </div>
+        </div>
+
+        <!-- Bloc 2 -->
+        <div class="col-12 col-md-4">
+            <div class="home-card text-center p-4">
+                <h4 class="fw-bold mb-2">Tournois CESAM</h4>
+                <p class="para text-muted">Foot ou basket, c’est toi qui choisis ton terrain de gloire ! Nos tournois, c’est l’occasion de briller, de défier tes potes et de prouver ton talent. Spoiler : tout le monde repart avec des souvenirs (et parfois même avec un trophée)..</p>
+            </div>
+        </div>
+
+        <!-- Bloc 3 -->
+        <div class="col-12 col-md-4">
+            <div class="home-card text-center p-4">
+                <h4 class="fw-bold mb-2">Entrainements</h4>
+                <p class="para text-muted">Pas de pression, juste du plaisir et de la progression ! Nos séances, c’est l’endroit idéal pour t’améliorer, rencontrer des passionnés comme toi et te préparer à écraser la compétition… ou juste à bien t’amuser. Alors, tu viens quand ?.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<h4 class=" com-mem text-center "> les membres de la commission Sportive </h4>
+  <!-- Afficher les membres de chaque commission-->
+<div class="container mt-4">
+    <div class="row">
+        {% for membre in membres %}
+        <div class="col-md-3 mb-3">
+            <div class="card h-100">
+                <!-- Image avec une classe pour forcer la taille -->
+                <img src="{{ membre.image.url }}" class="card-img-top membres-img img-fluid" alt="{{ membre.photo }}">
+                <div class="card-body">
+                  <br>
+                    <h5 class="card-title">{{ membre.nom }}</h5>
+                     <p class="card-desc">{{ membre.poste }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+{% endblock %}

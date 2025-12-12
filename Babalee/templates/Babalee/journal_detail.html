@@ -1,0 +1,17 @@
+{% extends "Babalee/base.html" %}
+
+{% block content %}
+<br><br>
+ <a href="{% url 'journal_list' %}" class="btn btn-secondary">Retour</a>
+<div class="container py-5">
+
+    <h1 class="mb-3">{{ j.titre }}</h1>
+    <p class="text-muted">{{ j.date_publication|date:"d M Y" }}</p>
+
+    <div class="mt-4">
+        {{ j.contenu|safe }}
+    </div>
+</div> <br><br>
+
+    
+{% endblock %}

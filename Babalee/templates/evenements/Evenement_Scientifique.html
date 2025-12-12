@@ -1,0 +1,63 @@
+{% extends "Babalee/base.html" %}
+{% block title %}Evenement_Scientifique{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="commission-com text-center">
+     <h1 class="titreapropos mb-3 mt-1 justify-content-center">Evenement Scientifique</h1>
+  </div>
+  
+  <div class="row mt-4">
+    <!-- CAROUSEL WRAPPER -->
+<div class="col-lg-6">
+  <!-- Wrapper avec bordure -->
+  <div class="carousel-wrapper border-success border-2.5 rounded-4 position-relative">
+    <div id="carouselExampleCaptions" class="carousel slide carousel-large">
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        {% for slide in slides %}
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ forloop.counter0 }}"
+                  class="{% if forloop.first %}active{% endif %}" aria-current="{% if forloop.first %}true{% endif %}"
+                  aria-label="Slide {{ forloop.counter }}"></button>
+        {% endfor %}
+      </div>
+
+      <!-- Slides -->
+      <div class="carousel-inner">
+        {% for slide in slides %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <img src="{{ slide.image.url }}" class="d-block w-120 carousel-img" alt="{{ slide.titre }}">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>{{ slide.titre }}</h5>
+              <p>{{ slide.description }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+    <!-- Paragraphe -->
+       
+    <div class="col-lg-6 d-flex align-items-center">
+    
+      <p class="parag">
+          <br>
+ Un moment fort de notre plan d'action où savoir, innovation et partage ont convergé pour inspirer et unir les professionnels. Entre conférences captivantes, débats enrichissants et quiz scientifiques stimulants, chaque participant a pu explorer les enjeux actuels de la science, échanger des idées et forger des collaborations prometteuses. Les retours d’expérience et les témoignages de terrain ont apporté une dimension concrète et inspirante, renforçant les liens entre experts et passionnés.Un grand merci à tous pour votre engagement et votre curiosité, qui ont fait de cet événement un véritable catalyseur d’intelligence collective et de progrès. 
+
+    </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

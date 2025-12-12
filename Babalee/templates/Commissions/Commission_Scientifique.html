@@ -1,0 +1,70 @@
+{% extends "Babalee/base.html" %}
+{% block title %}Commission Scientifique{% endblock %}
+
+{% block content %}
+<!-- SECTION HERO -->
+<div class="commission-hero d-flex flex-column justify-content-center align-items-center text-center">
+    <h2 class="com-inity text-center"> <br>Commission Scientifique</h2>
+    <p class="commission-text fw-bold"><br>
+        Nous organisons des événements académiques et scientifiques stimulants et offrons un soutien continu pour promouvoir l'excellence et catalyser la réussite scolaire de nos membres.
+    </p>
+</div>
+<!-- SECTION com -->
+<div class="commission-com d-flex flex-column justify-content-center align-items-center text-center">
+    <h4 class="titreapropos text-center"><br> Notre ambition </h4>
+    <p class="commission-com-text fw-bold">
+        Offrir aux Aseguimiens de Meknès un cadre favorable à leur plein épanouissement</p>
+</div>
+ <h4 class="titrebureau text-center "><br> Nos Initiatives </h4>
+
+ <div class="container my-5 justify-content-center">
+    <div class="row g-4">
+
+        <!-- Bloc 1 -->
+        <div class="col-12 col-md-4">
+            <div class="home-card text-center p-4">
+                <h4 class="fw-bold mb-2">Événements Scientifiques</h4><br>
+                <p class="para text-muted">Organisation d'événements tout au long de l'année pour nourrir l'intérêt et les compétences de nos membres..</p>
+               <a href="{% url 'Evenement_Scientifique'%}" class="btn btn-outline-success btn-lg mb-1">Voir nos evenements</a>
+            </div>
+        </div>
+
+        <!-- Bloc 2 -->
+        <div class="col-12 col-md-4">
+            <div class="home-card text-center p-4">
+                <h4 class="fw-bold mb-2">Webinaires de Formation</h4><br>
+                <p class="para text-muted">Nous organisons régulièrement des webinaires sur des sujets variés selon les besoins et attentes de nos étudiants membres.</p>
+            </div>
+        </div>
+
+        <!-- Bloc 3 -->
+        <div class="col-12 col-md-4">
+            <div class="home-card text-center p-4">
+                <h4 class="fw-bold mb-2">Réseautage</h4><br>
+                <p class="para text-muted">Des experts chevronnés transmettent leur savoir sur divers sujets et thématiques lors de conférences et webinaires, apportant des perspectives enrichissantes.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<h4 class=" com-mem text-center "> les membres de la commission Scientifique </h4>
+  <!-- Afficher les membres de chaque commission-->
+<div class="container mt-4">
+    <div class="row">
+        {% for membre in membres %}
+        <div class="col-md-3 mb-3">
+            <div class="card h-100">
+                <!-- Image avec une classe pour forcer la taille -->
+                <img src="{{ membre.image.url }}" class="card-img-top membres-img img-fluid" alt="{{ membre.photo }}">
+                <div class="card-body">
+                  <br>
+                    <h5 class="card-title">{{ membre.nom }}</h5>
+                     <p class="card-desc">{{ membre.poste }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+{% endblock %}

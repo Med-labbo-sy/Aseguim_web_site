@@ -1,0 +1,26 @@
+{% extends "Babalee/base.html" %}
+{% block title %}Nos elites{% endblock %}
+
+{% block content %}
+
+<h4 class="commission-hero"> Nos Elites </h4>
+  <!-- Afficher les membres de chaque commission-->
+<div class="container mt-4">
+    <div class="row">
+        {% for membre in membres %}
+        <div class="col-md-3 mb-3">
+            <div class="card h-100">
+                <!-- Image avec une classe pour forcer la taille -->
+                <img src="{{ membre.image.url }}" class="card-img-top membres-img" alt="{{ membre.photo }}">
+                <div class="card-body">
+                  <br>
+                    <h5 class="card-title">{{ membre.nom }}</h5>
+                     <h6 class="card-title">{{ membre.domaine }}</h6>
+                     <p class="card-desc">{{ membres.description }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+{% endblock %}

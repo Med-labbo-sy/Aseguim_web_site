@@ -1,0 +1,70 @@
+{% extends "Babalee/base.html" %}
+{% block title %}Commission Scientifique{% endblock %}
+
+{% block content %}
+<!-- SECTION HERO -->
+<div class="commission-hero d-flex flex-column justify-content-center align-items-center text-center">
+    <h2 class="com-inity">Commission Sociale</h2>
+    <p class="commission-text">
+        La commission administrative et sociale de l’ASEGUIM Meknès joue un rôle clé dans l’intégration et le soutien des nouveaux étudiants. Elle est chargée d’assurer un accueil chaleureux et informatif dès leur arrivée, en organisant des journées d’orientation pour les familiariser avec l’école, les filières et la vie associative.
+    </p>
+</div>
+<!-- SECTION com -->
+<div class="commission-com d-flex flex-column justify-content-center align-items-center text-center">
+   <br> <h4 class="titreapropos text-center"> Notre ambition </h4>
+    <p class="commission-com-text">
+        Offrir aux Aseguimiens de Meknès un cadre favorable à leur plein épanouissement."</p>
+</div>
+ <h4 class="titrebureau "> Nos Initiatives </h4>
+
+ <div class="container my-5 justify-content-center">
+    <div class="row g-4">
+
+        <!-- Bloc 1 -->
+        <div class="col-12 col-md-4">
+            <div class="home-card text-center p-4 h-100 ">
+                <h4 class="fw-bold mb-2">Accueil</h4><br>
+                <p class="para text-muted">Elle est le premier contact des nouveaux étudiants : elle les accueille, les guide dans leurs démarches administratives, les aide à trouver un logement et Leur permettre de s’installer sereinement </p>
+               <a href="{% url 'Evenement_Social'%}" class="btn btn-outline-success btn-lg mb-1">Voir </a>
+            </div>
+        </div>
+
+        <!-- Bloc 2 -->
+        <div class="col-12 col-md-4">
+            <div class="home-card text-center p-4 h-100">
+                <h4 class="fw-bold mb-2"> Soutien && Accompagnement </h4><br>
+                <p class="para text-muted"> Cette commission accompagne également les étudiants dans leurs démarches administratives (inscriptions, bourses, Carte sejour etc.).</p>
+            </div>
+        </div>
+
+        <!-- Bloc 3 -->
+        <div class="col-12 col-md-4">
+            <div class="home-card text-center p-4 h-100">
+                <h4 class="fw-bold mb-2"> Mission </h4><br>
+                <p class="para text-muted">En agissant comme un relais entre l’administration et les étudiants, elle contribue à créer un environnement propice à la réussite académique et à l’épanouissement personnel.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<h4 class=" com-mem text-center "> les membres de la commission administrative && Sociale </h4>
+  <!-- Afficher les membres de chaque commission-->
+<div class="container mt-4">
+    <div class="row">
+        {% for membre in membres %}
+        <div class="col-md-3 mb-3">
+            <div class="card h-100">
+                <!-- Image avec une classe pour forcer la taille -->
+                <img src="{{ membre.image.url }}" class="card-img-top membres-img img-fluid" alt="{{ membre.photo }}">
+                <div class="card-body">
+                  <br>
+                    <h5 class="card-title">{{ membre.nom }}</h5>
+                     <p class="card-desc">{{ membre.poste }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+{% endblock %}

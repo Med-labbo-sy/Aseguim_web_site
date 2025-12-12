@@ -1,0 +1,67 @@
+{% extends "Babalee/base.html" %}
+
+{% block title %}Contact{% endblock %}
+{% block content %}
+<!-- Section de bienvenue -->
+<div class="text-center my-2 py-2 py-2 shadow-sm"><br><br><br><br><br>
+  <h2 class="commission-hero py-4"> Nous contactez </h2>
+</div>
+
+  <section>
+  <div class="container my-4">
+
+    {% if messages %}
+      {% for msg in messages %}
+        <div class="alert alert-{{ msg.tags }} text-center">{{ msg }}</div>
+      {% endfor %}
+    {% endif %}
+
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="contact-card p-4 shadow-sm">
+
+          <form method="POST" novalidate autocomplete="off">
+            {% csrf_token %}
+
+            <!-- Django affiche automatiquement les erreurs sécurisées -->
+            {{ form.non_field_errors }}
+
+            <div class="mb-3">
+              {{ form.nom.label_tag }}
+              {{ form.nom }}
+              <div class="text-danger small">{{ form.nom.errors }}</div>
+            </div>
+
+            <div class="mb-3">
+              {{ form.email.label_tag }}
+              {{ form.email }}
+              <div class="text-danger small">{{ form.email.errors }}</div>
+            </div>
+
+            <div class="mb-3">
+              {{ form.objet.label_tag }}
+              {{ form.objet }}
+              <div class="text-danger small">{{ form.objet.errors }}</div>
+            </div>
+
+            <div class="mb-3">
+              {{ form.message.label_tag }}
+              {{ form.message }}
+              <div class="text-danger small">{{ form.message.errors }}</div>
+            </div>
+
+            <!-- Honeypot -->
+            {{ form.honeypot }}
+
+            <button class="btn btn-primary w-100" type="submit">Envoyer</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}
+

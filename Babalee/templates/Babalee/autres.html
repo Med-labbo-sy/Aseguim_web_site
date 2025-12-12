@@ -1,0 +1,88 @@
+{% extends "Babalee/base.html" %}
+
+{% block title %}autres{% endblock %}
+{% block content %}
+<!-- PAGES AUTRES -->
+<div class="text-center my-2 py-2 py-2 shadow-sm"><br><br><br><br><br>
+  <h2 class="commission-hero py-4"> Guide de l'Aseguimien</h2>
+</div>
+      <div class="row g-4 py-4 mx-4 justify-content-center">
+      <!-- Card 1 : But exact -->
+      <div class="col-sm-3 justify-content-center ">
+        <div class="about-card-autre  shadow-sm about-card-autre">
+          <div class="card-body d-flex flex-column">
+            <h5 class="about-card-title text-center">Guide du nouveau étudiant </h5>
+              <p class=" text-center about-card-text">le bureau regionnal de meknès met à la disposition des nouveaux étudiants orientés dans la ville de meknès un guide complet sur la vie estudiantine au maroc 
+              </p>
+              
+            <a href="{% url 'Guide_maroc' %}" class="btn btn-outline-primary mt-auto justify-content-center">Voir</a>
+          </div>
+        </div>
+      </div>
+
+        <!-- Card 1 : But exact -->
+      <div class="col-sm-3 justify-content-center ">
+        <div class="about-card-autre about-card-autre">
+          <div class="card-body d-flex flex-column">
+            <h5 class="about-card-title text-center">Etudes au maroc</h5>
+        
+              <p class="  text-center about-card-text"> L'Aseguim met à la disposition des étudiants un guide stratégique dédié aux études au Maroc. Il offre une vision claire sur les procédures de changement de filière et l’accès aux grandes écoles.</p>
+            
+           
+            <a href="{% url 'Etude_maroc' %}" class="btn btn-outline-danger mt-auto justify-content-center">Voir</a>
+          </div>
+        </div>
+      </div>
+     
+
+        <!-- Card 1 : But exact -->
+      <div class="col-sm-3 justify-content-center">
+        <div class="about-card-autre shadow-sm about-card-autre">
+          <div class="card-body d-flex flex-column">
+            <h5 class="about-card-title text-center"> Titre de sejour</h5>
+            <p class=" text-center about-card-text"> Nous mettons à votre disposition un guide complet dédié aux démarches administratives liées à l’obtention de la carte de séjour. Ce guide a été élaboré pour faciliter leurs procédures. </p>
+          
+            <a href="{% url 'Sejour_maroc' %}" class="btn btn-outline-success mt-auto justify-content-center">Voir</a>
+          </div>
+        </div>
+      </div>
+     
+
+        <!-- Card 1 : But exact -->
+      <div class="col-sm-3 justify-content-center">
+        <div class="about-card-autre shadow-sm about-card-autre">
+          <div class="card-body d-flex flex-column">
+            <h5 class="about-card-title text-center">Liens utils </h5>
+            <br>
+            <ul>
+              <li>
+            <div>
+                <a href="https://www.amci.ma/" target="_blank" rel="noopenernoreferrer"> AMCI</a>
+                <br>
+            </div></li>
+            <li>
+              <div>
+              <a href="https://snabe.gov.gn/" target="_blank" rel="noopenernoreferrer"> SNABE</a>
+              <br>
+            </div>
+         </li>
+           <li> <div>
+               <a href="https://paycard.co/" target="_blank" rel="noopenernoreferrer"> Paycard</a><br>
+            </div>
+            </li>
+            <li>
+            <div> 
+              <a href="https://www.aseguim.com/" target="_blank" rel="noopenernoreferrer"> Aseguim Centrale</a>
+            </div>  
+          </li>
+            <li>
+            <div> 
+              <a href="https://web.facebook.com/ambaguirabat/?locale=fr_FR&_rdc=1&_rdr" target="_blank" rel="noopenernoreferrer"> Ambassade de la Guinée au Maroc </a><br>
+            </div> 
+            </li>
+           </ul> 
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

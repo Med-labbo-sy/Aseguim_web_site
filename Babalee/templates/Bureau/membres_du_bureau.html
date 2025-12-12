@@ -1,0 +1,29 @@
+{% extends "Babalee/base.html" %}
+{% block title %}membres du bureau{% endblock %}
+
+{% block content %}
+<section class="b">
+<div class="container-fluid">
+<h4 class="titrebureau justify-content-center"> <br><br>les membres du bureau regionnal de Meknès <br></h4>
+  <!-- Afficher les membres -->
+
+<div class="container mt-4">
+    <div class="row">
+        {% for membre in membres_Bureau %}
+        <div class="col-md-4 mb-3">
+            <div class="card h-100 w-100 border-5 border-success">
+                <!-- Image avec une classe pour forcer la taille -->
+                <img src="{{ membre.image.url }}" class="card-img-top membres-img" alt="{{ membre.photo }}">
+                <div class="card-body">
+                  <br>
+                    <h5 class="card-title">{{ membre.nom }}</h5>
+                     <p class="card-desc">{{ membre.poste }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+  </div>
+  </section>
+{% endblock %}

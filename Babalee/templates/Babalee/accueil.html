@@ -1,0 +1,372 @@
+{% extends "Babalee/base.html" %}
+
+{% block title %}Aseguim-meknès{% endblock %}
+
+{% block content %}
+
+<!-- SECTION HERO -->
+<section class="hero-section text-center">
+  <div class="container"><br><br><br>
+    <h1 class=" com-ini display-4 fw-bold">Un pas dans la vie associative</h1>
+    <p class="lead text-muted mt-3">
+      Une communauté dynamique au service de l'excellence académique et de l'épanouissement étudiant.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row mb-1">
+      <div class="text-center">
+        <h1 class="titreapropos mb-3 mt-1 justify-content-center">ASEGUIM Meknès</h1>
+      <p class="lead text-center text-sm-center text-md-start 
+           fs-6 fs-sm-6 fs-md-5 fs-lg-4 fs-xl-4 mx-auto" 
+   style="max-width: 750px;">
+  <br>Branche régionale de l’ASEGUIM-Centrale dédiée à l’accompagnement, 
+  l’intégration et l’épanouissement des étudiants guinéens à Meknès. 
+  Solidarité, partage et excellence au cœur de nos actions.
+</p>
+
+      </div>
+    </div>
+      
+    <div class="row g-4">
+
+  <!-- Card 1 -->
+  <div class="col-12 col-md-6">
+    <div class="card-ap h-100 shadow-sm ">
+      <div class="card-ap d-flex flex-column text-center text-md-start">
+
+        <!-- Icon -->
+        <div class="icon-ap mb-2 mx-auto mx-md-0">
+          <svg width="55" height="28" class="d-md-none" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L3 7v6c0 5 4 9 9 9s9-4 9-9V7l-9-5z" stroke="currentColor" stroke-width="1"/>
+          </svg>
+
+          <svg width="80" height="40" class="d-none d-md-block" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L3 7v6c0 5 4 9 9 9s9-4 9-9V7l-9-5z" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+        </div>
+
+        <!-- Title -->
+        <h5 class="card-ap-title fs-6 fs-md-4">Notre but</h5>
+
+        <!-- Text -->
+        <p class="card-ap-text fs-7 fs-md-5 lh-sm lh-md-base">
+          Nous fournissons un soutien académique, administratif et social aux étudiants guinéens de Meknès.
+          Nos actions, sans but lucratif, visent l’intérêt collectif, la cohésion et la réussite.
+        </p>
+
+        <!-- Button 
+        <a href="{% url 'Nos_Elites' %}" 
+           class="btn btn-outline-success btn-sm btn-md-lg mx-auto mx-md-0">
+           Voir nos élites
+        </a> -->
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="col-12 col-md-6">
+    <div class="card-ap h-100 shadow-sm  card-ap-alt">
+      <div class="card-ap d-flex flex-column text-center text-md-start">
+
+        <!-- Icon -->
+        <div class="icon-ap mb-2 mx-auto mx-md-0">
+          <svg width="55" height="28" class="d-md-none" viewBox="0 0 24 24" fill="none">
+            <path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="1"/>
+          </svg>
+
+          <svg width="80" height="40" class="d-none d-md-block" viewBox="0 0 24 24" fill="none">
+            <path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+        </div>
+
+        <!-- Title -->
+        <h5 class="titreapropos fs-6 fs-md-4">
+         Bureau region de Meknès
+        </h5>
+
+        <!-- Text -->
+        <p class="card-ap-text fs-7 fs-md-5 lh-sm lh-md-base fw-bold">
+          <br>Oui le benevolat n'a pas de prix mais il a une valeur 
+        </p>
+
+        <p class="small text-muted mb-2 fs-8">
+          Ensemble, faisons de l’engagement associatif un véritable tremplin professionnel et citoyen.
+          <br>
+        </p>
+
+        <!-- Button -->
+      <a href="{% url 'Membres_du_Bureau'%}" class="btn btn-outline-success mb-1 justify-content-center">Nos membres</a> 
+
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- SECTION DOMAINES -->
+<section class="container">
+  <h2 class="text-center section-title">Nos Domaines d'Intervention</h2>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4  mx-3">
+
+    <!-- Carte 1 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm text-center p-3  border-primary">
+        <i class="bi bi-table text-primary mb-3"></i>
+        <h5 class="fw-bold">Scientifique</h5>
+        <p class="text-muted">
+          Événements académiques, études, soutien continu et excellence scolaire.
+        </p>
+        <a href="{% url 'Evenement_Scientifique' %}" class="btn btn-outline-primary mt-auto">Voir plus</a>
+      </div>
+    </div>
+
+    <!-- Carte 2 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm text-center p-3 border-success">
+        <i class="bi bi-brush text-success mb-3"></i>
+        <h5 class="fw-bold">Culturel</h5>
+        <p class="text-muted">
+          Promotion de la culture guinéenne à travers divers événements et activités.
+        </p>
+        <a href="{% url 'Evenement_Culturelle' %}" class="btn btn-outline-success mt-auto">Voir plus</a>
+      </div>
+    </div>
+
+    <!-- Carte 3 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm text-center p-3 border-warning">
+        <i class="bi bi-people text-warning mb-3"></i>
+        <h5 class="fw-bold">Social</h5>
+        <p class="text-muted">
+          Accueil, intégration et renforcement des liens entre les membres.
+        </p>
+        <a href="{% url 'Evenement_Social' %}" class="btn btn-outline-warning mt-auto">Voir plus</a>
+      </div>
+    </div>
+
+    <!-- Carte 4 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm text-center p-3 border-danger">
+        <i class="bi bi-trophy text-danger mb-3"></i>
+        <h5 class="fw-bold">Sportif</h5>
+        <p class="text-muted">
+          Tournois sportifs, rencontres et activités pour le bien-être physique.
+        </p>
+        <a href="{% url 'Evenement_Sportif' %}" class="btn btn-outline-danger mt-auto">Voir plus</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION COMMISSIONS -->
+<section class="container my-5">
+  <h2 class="text-center section-title">Nos Commissions</h2>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4  mx-3">
+
+    <!-- Commission Scientifique -->
+    <div class="col">
+      <a href="{% url 'Commission_Scientifique'%}" class="text-decoration-none">
+        <div class="card h-70 w-100 rounded-circle shadow about-card-autre gradient-card">
+          <div class="card-body btn btn-danger text-center">
+            <h5>Commission Scientifique</h5>
+            <br>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Commission Culturelle -->
+    <div class="col">
+      <a href="{% url 'Commission_Culturelle' %}" class="text-decoration-none text-dark">
+        <div class="card h-70 w-100 mb-1 rounded-circle about-card-autre">
+          <div class="card-body btn btn-warning text-center">
+            <h5>Commission Culturelle</h5>
+            <br>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Commission Sociale -->
+    <div class="col">
+      <a href="{% url 'Commission_Sociale' %}" class="text-decoration-none text-dark">
+        <div class="card h-70 w-100 rounded-circle shadow about-card-autre">
+          <div class="card-body btn btn-success text-center">
+            <h5>Commission Sociale</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Commission Sportive -->
+    <div class="col">
+      <a href="{% url 'Commission_Sportive' %}" class="text-decoration-none text-dark">
+        <div class="card h-70 w-100 shadow rounded-circle about-card-autre">
+          <div class="card-body  btn btn-danger text-center">
+            <h5>Commission Sportive</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Cellule Communication -->
+    <div class="col">
+      <a href="{% url 'Cellule_de_Com' %}" class="text-decoration-none text-dark">
+        <div class="card h-70 w-100 rounded-circle about-card-autre">
+          <div class="card-body btn btn-warning text-center">
+            <h5>Cellule de Communication</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Cellule Récolte -->
+    <div class="col">
+      <a href="{% url 'Cellule_de_Recolte' %}" class="text-decoration-none text-dark">
+        <div class="card h-70 w-100  rounded-circle about-card-autre">
+          <div class="card-body btn btn-success">
+            <h5>Commission de Récolte</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="container my-5">
+  <h2 class="com-ini text-center mb-4 fw-bold">FAQ — Questions fréquentes</h2>
+
+  <div class="accordion" id="faqAccordion">
+
+    <!-- Question 1 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq1">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer1">
+          Comment rejoindre l’association ?
+        </button>
+      </h2>
+      <div id="answer1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Il suffit de remplir le formulaire d’adhésion disponible dans la rubrique “Nous rejoindre”.
+          Une fois votre demande validée, un membre du bureau vous contactera.
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq2">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer2">
+          Qui peut participer aux activités ?
+        </button>
+      </h2>
+      <div id="answer2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Tous les étudiant(e)s peuvent participer,
+          même sans être membres officiels.
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq3">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer3">
+          L’association est-elle à but lucratif ?
+        </button>
+      </h2>
+      <div id="answer3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Non. Toutes nos actions sont menées de manière bénévole et sans but lucratif,
+          dans l’intérêt collectif des étudiants guinéens de Meknès.
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq4">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer4">
+          Comment contacter le bureau ?
+        </button>
+      </h2>
+      <div id="answer4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Vous pouvez nous écrire via la page “Contact”, ou via nos réseaux sociaux :
+          Instagram, Facebook et LinkedIn.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="row">
+ <!-- SECTION NOUS CONTACTER -->
+  <div class="container text-center col-lg-8">
+    <h2 class=" titreapropos fw-bold mb-3">Nous contacter</h2>
+    <p class="text-muted mb-4">
+      Retrouvez-nous sur nos réseaux sociaux et restez connectés avec notre communauté.
+    </p>
+
+    <!-- Icônes Réseaux Sociaux -->
+    <div class="d-flex justify-content-center gap-4">
+
+      <!-- Instagram -->
+      <a href="#" target="_blank" class="text-danger fs-2">
+        <i class="bi bi-instagram"></i>
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/aseguim.meknes.758" target="_blank" class="text-primary fs-2">
+        <i class="bi bi-facebook"></i>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="#" target="_blank" class="text-primary fs-2">
+        <i class="bi bi-linkedin"></i>
+      </a>
+    </div>
+   </div>
+<div class="col-lg-4">
+   <br><br>
+<h5 class="titreapropos text-center">Liens utils </h5>
+            <ul class="section-puces">
+              <li>
+            <div>
+                <a href="https://www.amci.ma/" style="color: #da5b06;" target="_blank" rel="noopenernoreferrer"> AMCI</a>
+                <br>
+            </div></li>
+            <li>
+              <div>
+              <a href="https://snabe.gov.gn/" style="color: #da5b06;" target="_blank" rel="noopenernoreferrer"> SNABE</a>
+              <br>
+            </div>
+         </li>
+           <li> <div>
+               <a href="https://paycard.co/" style="color: #da5b06;" target="_blank" rel="noopenernoreferrer"> Paycard</a><br>
+            </div>
+            </li>
+            <li>
+            <div> 
+              <a href="https://www.aseguim.com/" style="color: #da5b06;" target="_blank" rel="noopenernoreferrer"> Aseguim Centrale</a>
+            </div>  
+          </li>
+            <li>
+            <div> 
+              <a href="https://web.facebook.com/ambaguirabat/?locale=fr_FR&_rdc=1&_rdr" style="color: #da5b06;" target="_blank" rel="noopenernoreferrer"> Ambassade de la Guinée au Maroc </a><br>
+            </div> 
+            </li>
+           </ul> 
+          </div>
+        </div>
+{% endblock %}

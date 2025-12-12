@@ -1,0 +1,25 @@
+{% extends "Babalee/base.html" %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class=" titrebureau text-center">Bienvenu sur le journal Wontanara</h1>
+
+    <div class="row">
+        {% for j in journaux %}
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{ j.titre }}</h5>
+                   <a href="{% url 'journal_detail' j.id %}" class="btn btn-primary">Lire plus</a>
+
+                      <h6 class="text-muted">{{ j.date_publication|date:"d M Y" }}</h6>
+                       <img src="{{ j.image.url }}" class="card-img-top" alt="">
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-center">Aucun journal publié pour le moment.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

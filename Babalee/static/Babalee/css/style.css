@@ -1,0 +1,695 @@
+/* =========================
+   GLOBAL
+========================= */
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* nécessaire pour footer collé */
+  padding-bottom: 0;
+  font-family: Arial, sans-serif;
+  color: #0b0b0b;
+  box-sizing: border-box;
+  background:linear-gradient(180deg, #ffffff 0%, #ededf0 100%);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+nav.navbar {
+    background-color: #1c1c1c;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    margin-top: auto; /* pousse le footer en bas */
+    font-size: 0.9em;
+    color: #0d1331;
+    padding: 15px 0;
+    background-color: #050712; /* optionnel : couleur de fond */
+    text-align: center;
+}
+
+/* =========================
+   SECTION HERO
+========================= */
+.commission-hero {
+    background: linear-gradient(135deg, #0b132b, #1c2541);
+    color: #f0f0f0;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    padding-top: 12%;
+    padding-bottom: 10%;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+
+.commission-com {
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    color: #000000;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    padding-top: 5%;
+    padding-bottom:6%;
+    box-sizing: border-box;
+    text-align: center;
+   
+   
+}
+
+.com-inity {
+  color: #ffffff;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-weight: 590;
+  font-style:normal ;
+  padding-top: 2%;
+  padding-bottom:3%;}
+
+.com-ini {
+  color: #9bffe1;
+  font-family: lora;
+  text-align: center;
+  font-weight: 400;
+  font-style: oblique;
+  padding-top: 2%;
+  padding-bottom:3%;
+
+}
+@media (max-width: 570px) {
+  .com-ini { font-size: 1.8rem; } /* mobile */
+}
+@media (min-width: 576px) {
+  .com-ini { font-size: 2.2rem; } /* tablette */
+}
+
+@media (min-width: 992px) {
+  .com-ini { font-size: 3.5rem; } /* grand écran */
+}
+
+.com-mem {
+  color: #51f0e8;
+  font-family: lora;
+  text-align: center;
+  font-weight: 480;
+  font-style:normal;
+  padding-top: 2%;
+  padding-bottom:3%;
+
+}
+@media (max-width: 570px){
+  .com-mem { font-size: 1.8rem; } /* mobile */
+}
+@media (min-width: 576px) {
+  .com-mem { font-size: 2.2rem; } /* tablette */
+}
+
+@media (min-width: 992px) {
+  .com-mem { font-size: 3.5rem; } /* grand écran */
+}
+/* =========================
+   TITRE avec gradient animé + typing
+========================= */
+.commission-title {
+    font-size: 0.5rem;
+    font-weight: 500;
+    letter-spacing: 0px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    color: #ffffff;
+    background-size: 300% 100%;
+    display: inline-block;
+    text-align: center;
+    
+}
+
+/* =========================
+   TEXTE DESCRIPTION
+========================= */
+.commission-text {
+    font-size: 2.4rem;
+    max-width: 1080px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    text-align: center;
+    padding-top: 3%;
+    
+}
+
+.commission-com-text {
+    font-size: 2.4rem;
+    max-width: 1080px;
+    line-height: 1.6;
+    color: #0c0b0b;
+    text-align: center;
+    padding-top: 3%;
+    
+}
+
+
+.commission-com-title {
+    font-size: 0.5rem;
+    font-weight: 500;
+    letter-spacing: 0px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #0b1113, #16171f, #030210);
+    background-size: 300% 100%;
+    text-align: center;
+    
+}
+
+
+
+
+
+/* =========================
+   TITRE RESPONSIVE
+========================= */
+@media (max-width: 565px) {
+    .commission-title {
+        font-size: 1.2rem;
+       
+    }
+    .commission-text {
+        font-size: 0.7rem;
+        line-height: 1.4;
+        padding: 0 5%;
+    }
+}
+
+
+@media (min-width: 580px) and (max-width: 992px) { /* tablette */
+    .commission-title {
+        font-size: 2.6rem;
+      
+    }
+    .commission-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 993px) { /* grand écran */
+    .commission-title {
+        font-size: 6rem;
+        
+    }
+    .commission-text {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+/* =========================
+   TITRE com RESPONSIVE
+========================= */
+@media (max-width: 565px) {
+    .commission-com-title {
+        font-size: 1.2rem;
+      /
+    }
+    .commission-com-text {
+        font-size: 0.7rem;
+        line-height: 1.4;
+        padding: 0 5%;
+    }
+}
+
+
+@media (min-width: 580px) and (max-width: 992px) { /* tablette */
+    .commission-com-title {
+        font-size: 2.6rem;
+      
+    }
+    .commission-com-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 993px) { /* grand écran */
+    .commission-com-title {
+        font-size: 6rem;
+       
+    }
+    .commission-com-text {
+        font-size: 1.8rem;
+    }
+}
+
+.home-card {
+    padding-left: 1%;
+    padding-right: 2%;
+    width: 370px;    /* largeur fixe */
+    height: 350px;   /* hauteur fixe */
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.5s ease-in-out;
+    left: 50%;
+    right: 50%;
+}
+
+.home-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.card-icon {
+    height: 60px;  /* taille du logo */
+}
+.para{
+  font-size: 1.2rem;
+  text-align:center;
+
+}
+
+/* css des cards desktok*/
+
+  .card {
+    height: 700px; 
+    width: 310px;          /* hauteur fixe pour toutes les cards */
+    overflow: hidden;       /* cache le surplus */
+    border-radius: 2px;
+    margin-left: auto;
+    margin-right:auto;
+   
+}
+ 
+
+
+
+  .membres-img {
+    width: 100%;
+    height: 400px;          /* image fixe */
+    object-fit: cover;
+     transition: 0.25s ease-in-out;
+}
+
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+  .card-desc {
+    font-size: 0.95rem;     
+    color: #555;
+   
+}
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* ASEGUIM Meknès — about cards */
+
+
+
+
+.about-card-autre {
+  background: white;
+  border: none;
+  border-radius: var(--border-radius);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+  height: 370px;
+}
+
+
+
+.about-card-title {
+  font-weight: 400;
+  margin: 1rem 0;
+  color: var(--dark-color);
+}
+
+.about-card-text {
+  color: #495057;
+  font-size:medium;
+}
+
+
+
+
+
+
+.contact-card {
+    border-radius: 14px;
+    background: #fff;
+    transition: .3s;
+}
+.contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+#id_honeypot {
+  display: none !important;
+}
+
+
+/* === CAROUSEL WRAPPER === */
+.carousel-wrapper {
+  border: 4px solid #2b2e31;  /* bordure visible */
+  border-radius: 15px;
+  overflow: hidden;           /* empêche les images de dépasser */
+  position: relative;         /* pour que la bordure soit au-dessus si nécessaire */
+  z-index: 1;                 /* assure que la bordure n'est pas cachée */
+}
+
+
+  
+
+.carousel-img {
+  width: 100%;
+  height: 570px;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+/* === PARAGRAPHE === */
+.parag {
+  font-size: 1.3rem;
+  text-align:center;
+}
+
+
+
+/* === FOOTER === */
+footer {
+  margin-top: auto;
+  background-color: #050712;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* Police et couleurs de base */
+:root {
+  --primary-color: #28a745; /* Vert ASEGUIM */
+  --secondary-color: #218838;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Reset et base */
+body {
+  font-family: var(--font-main);
+  color: var(--dark-color);
+  line-height: 1.6;
+}
+
+/* Section À propos */
+section {
+  padding: 4rem 0;
+  background-color: var(--light-color);
+}
+
+.titreapropos {
+  font-weight: 770;
+  color:#da5b06;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+
+}
+.titrebureau {
+  font-weight: 900;
+  color:#da5b06;
+  padding-bottom: 1.5rem;
+  text-align: center;
+
+}
+.b {
+  background-color: #f3ffff;
+  width: 100%;
+}
+
+.titreapropos::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+/* Cards */
+.card-ap {
+  background: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-justify: auto;
+}
+
+.card-ap:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.card-ap-alt {
+  background: linear-gradient(135deg, #f8f9fa 0%, #f5f5f5 100%);
+}
+
+.icon-ap {
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.card-ap:hover .icon-ap {
+  color: var(--secondary-color);
+}
+
+.card-ap-title {
+  font-weight: 600;
+  margin: 1rem 0;
+  color: var(--dark-color);
+}
+
+.card-ap-text {
+  color: #495057;
+}
+
+/* Boutons */
+.btn-outline-success {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  border-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-success:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .titreapropos {
+    font-size: 2rem;
+  }
+
+  .card-ap {
+    padding: 1.5rem;
+    text-align: start;
+  }
+
+  .fs-md-4 {
+    font-size: 1.5rem !important;
+  }
+
+  .fs-md-5 {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .titreapropos {
+    font-size: 1.8rem;
+  }
+
+  .card-ap {
+    padding: 1rem;
+  }
+
+  .fs-sm-6 {
+    font-size: 0.9rem !important;
+  }
+}
+
+
+/* Variables de base */
+:root {
+  --primary: #0d6efd;
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Reset et base */
+body {
+  font-family: var(--font-main);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* Section Hero */
+.hero-section {
+  padding: 0rem 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(233, 233, 233, 0.1) 100%);
+  margin-bottom: 0rem;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.hero-section .lead {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Titres de section */
+.section-title {
+  font-weight: 730;
+  color:#da5b06;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+section-puces {
+  font-weight: 730;
+  color:#ec680f;
+  text-align:left;
+  margin-bottom: 1rem;
+  font-style: normal;
+}
+
+
+
+
+/* Cartes - Domaines d'intervention */
+.card {
+  border: none;
+  width: 290px;
+  height: 88px;
+  border-radius: var(--border-radius);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.card.border-primary { border-top: 3px solid var(--primary) !important; }
+.card.border-success { border-top: 3px solid var(--success) !important; }
+.card.border-warning { border-top: 3px solid var(--warning) !important; }
+.card.border-danger { border-top: 3px solid var(--danger) !important; }
+
+.card i {
+  font-size: 2rem;
+}
+
+.btn-outline-primary { border-color: var(--primary); color: var(--primary); }
+.btn-outline-success { border-color: var(--success); color: var(--success); }
+.btn-outline-warning { border-color: var(--warning); color: var(--warning); }
+.btn-outline-danger { border-color: var(--danger); color: var(--danger); }
+
+.btn-outline-primary:hover,
+.btn-outline-success:hover,
+.btn-outline-warning:hover,
+.btn-outline-danger:hover {
+  color: white;
+}
+
+/* Cartes - Commissions */
+.about-card-autre {
+  border: none;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card-autre:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.about-card-autre .card-body {
+  padding: 2rem;
+  color: white;
+  border-radius: var(--border-radius);
+}
+
+.btn-danger { background-color: var(--danger); }
+.btn-warning { background-color: var(--warning); }
+.btn-success { background-color: var(--success); }
+
+.about-card-autre .card-body h5 {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-section h1 { font-size: 2rem; }
+  .hero-section .lead { font-size: 1.1rem; }
+}
+
+@media (max-width: 768px) {
+  .hero-section { padding: 4rem 0; }
+  .section-title { font-size: 1.5rem; }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 { font-size: 1.75rem; }
+  .hero-section .lead { font-size: 1rem; }
+  .card-body { padding: 1.5rem 1rem; }
+  .about-card-autre .card-body { padding: 1.5rem; }
+}
+
+

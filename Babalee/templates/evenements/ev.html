@@ -1,0 +1,56 @@
+{% extends "Babalee/base.html" %}
+
+{% block title %}Actualités && Evenement{% endblock %}
+{% block content %}
+<!-- Section de bienvenue -->
+<div class="text-center my-2 py-2 py-2 shadow-sm"><br><br><br><br><br>
+  <h2 class="commission-hero py-2"> Journal </h2>
+</div>
+      <div class="row g-4 py-4 mx-4 justify-content-center">
+      <!-- Card 1 : But exact -->
+      <div class="col-sm-3 justify-content-center mx-auto">
+        <div class="card h-100 shadow-sm about-card-autre">
+          <div class="card-body d-flex flex-column">
+            <h5 class="about-card-title text-center"> Actualités && Futurs evenements </h5>
+        
+            <a href="{% url 'Evenement_Futur'%}" class="btn btn-outline-primary mt-auto justify-content-center">Voir</a>
+          </div>
+        </div>
+      </div>
+
+        <!-- Card 1 : But exact -->
+      <div class="col-sm-3 justify-content-center mx-auto">
+        <div class="card h-100 shadow-sm about-card-autre">
+          <div class="card-body d-flex flex-column">
+            <h5 class="about-card-title text-center">Evenement Scientifique</h5>
+              <br>
+            
+            <a href="{% url 'Evenement_Scientifique'%}" class="btn btn-outline-danger mt-auto justify-content-center">Voir</a>
+          </div>
+        </div>
+      </div>
+     
+
+        <!-- Card 1 : But exact -->
+      <div class="col-sm-3 justify-content-center mx-auto">
+        <div class="card h-100 shadow-sm about-card-autre">
+          <div class="card-body d-flex flex-column">
+            <h5 class="about-card-title text-center"> Evenement Culturelle </h5>
+        
+            <a href="{% url 'Evenement_Culturelle'%}" class="btn btn-outline-success mt-auto justify-content-center">Voir</a>
+          </div>
+        </div>
+      </div>
+     
+
+        <!-- Card 1 : But exact -->
+      <div class="col-sm-3 justify-content-center mx-auto">
+        <div class="card h-100 shadow-sm about-card-autre">
+          <div class="card-body d-flex flex-column">
+            <h5 class="about-card-title text-center">Evenement Sportif </h5>
+              <a href="{% url 'Evenement_Sportif'%}" class="btn btn-outline-success mt-auto justify-content-center">Voir</a>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

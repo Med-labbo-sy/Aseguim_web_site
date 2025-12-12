@@ -1,0 +1,13 @@
+{% extends "Babalee/base.html" %}
+
+{% block content %}
+{% for e in etude %}
+
+    <h1 class=" titrebureau text-center">{{ e.titre }} </h1>
+
+    <p> {{ e.contenu|safe }} </p>
+        {% empty %}
+        <p class="text-center">Aucun information publiée pour le moment.</p>
+        {% endfor %}
+
+{% endblock %}

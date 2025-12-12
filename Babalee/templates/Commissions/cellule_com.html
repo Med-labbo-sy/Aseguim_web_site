@@ -1,0 +1,71 @@
+{% extends "Babalee/base.html" %}
+{% block title %}Commission Scientifique{% endblock %}
+
+{% block content %}
+<!-- SECTION HERO -->
+<div class="commission-hero d-flex flex-column justify-content-center align-items-center text-center">
+    <h2 class="com-inity">Cellule de Communication</h2>
+    <p class="commission-text">
+        La cellule de communication de notre association joue un rôle clé dans le rayonnement et la visibilité de nos activités. Elle se charge de transmettre nos messages, de valoriser nos projets et de créer un lien fort avec nos membres et notre communauté. Grâce à une stratégie bien pensée et des outils modernes, elle assure la promotion des événements, la gestion des réseaux sociaux, la création de contenus attractifs
+    </p>
+</div>
+<!-- SECTION com -->
+<div class="commission-com d-flex flex-column justify-content-center align-items-center text-center">
+   <br> <h4 class="titreapropos text-center"> Notre ambition </h4>
+    <p class="commission-com-text">
+        Offrir aux Aseguimiens de Meknès un cadre favorable à leur plein épanouissement."</p>
+</div>
+ <h4 class="titrebureau text-center "> Nos Initiatives </h4>
+
+ <div class="container my-5 justify-content-center">
+    <div class="row g-4">
+
+        <!-- Bloc 1 -->
+        <div class="col-12 col-md-4">
+            <div class="home-card text-center p-4 h-100 w-100">
+                <h4 class="fw-bold mb-2">Redaction des journaux</h4><br>
+                <p class="para text-muted">Nous produisons des contenus captivants sur l’actualité en Guinée et dans le monde, permettant à nos membres de rester informés des événements locaux et internationaux tout en mettant en valeur notre perspective associative.</p>
+               <a href="{% url 'journal_list' %}" class="btn btn-outline-success btn-lg mb-1">Voir nos articles </a>
+            </div>
+        </div>
+
+        <!-- Bloc 2 -->
+        <div class="col-12 col-md-4">
+            <div class="home-card text-center p-4 h-100 w-100">
+                <h4 class="fw-bold mb-2">Community management</h4><br>
+                <p class="para text-muted">Nos réseaux sociaux sont animés avec dynamisme pour créer un lien vivant avec notre public. Nous partageons nos initiatives, interagissons avec les membres et promouvons nos événements de manière stratégique et attractive.
+.</p>
+            </div>
+        </div>
+
+        <!-- Bloc 3 -->
+        <div class="col-12 col-md-4">
+            <div class="home-card text-center p-4 h-100 w-100">
+                <h4 class="fw-bold mb-2">Mediation</h4><br>
+                <p class="para text-muted justify-content-center" > Nous jouons également un rôle de facilitateur entre les membres, les partenaires et le public, en assurant une communication claire, respectueuse et efficace. Ce volet nous permet de résoudre les malentendus, de renforcer la cohésion et de valoriser les relations humaines au sein de l’association</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<h4 class=" com-mem text-center "> les membres de la Cellule de Communication</h4>
+  <!-- Afficher les membres de chaque commission-->
+<div class="container mt-4">
+    <div class="row">
+        {% for membre in membres %}
+        <div class="col-md-3 mb-3">
+            <div class="card h-100">
+                <!-- Image avec une classe pour forcer la taille -->
+                <img src="{{ membre.image.url }}" class="card-img-top membres-img img-fluid" alt="{{ membre.photo }}">
+                <div class="card-body">
+                  <br>
+                    <h5 class="card-title">{{ membre.nom }}</h5>
+                     <p class="card-desc">{{ membre.poste }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+{% endblock %}

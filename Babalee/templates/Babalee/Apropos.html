@@ -1,0 +1,108 @@
+{% extends "Babalee/base.html" %}
+
+{% block title %}Apropos{% endblock %}
+{% block content %}
+<!-- Section de bienvenue -->
+<!-- A PROPOS ASEGUIM MEKNES -->
+<section>
+  <div class="container">
+    <div class="row mb-4">
+      <div class="text-center">
+        <br><br><br>
+        <h1 class="titreapropos mb-3 mt-4 justify-content-center">ASEGUIM Meknès</h1>
+      <p class="lead text-center text-sm-center text-md-start 
+           fs-6 fs-sm-6 fs-md-5 fs-lg-4 fs-xl-4 mx-auto" 
+   style="max-width: 750px;">
+  Branche régionale de l’ASEGUIM-Centrale dédiée à l’accompagnement, 
+  l’intégration et l’épanouissement des étudiants guinéens à Meknès. 
+  Solidarité, partage et excellence au cœur de nos actions.
+</p>
+
+          <a href="{% url 'Membres_du_Bureau'%}" class="btn btn-outline-success btn-lg mb-1 justify-content-center">Voir nos membres</a>
+      </div>
+    </div>
+      
+    <div class="row g-4">
+
+  <!-- Card 1 -->
+  <div class="col-12 col-md-6">
+    <div class="card-ap h-100 shadow-sm ">
+      <div class="card-ap d-flex flex-column text-center text-md-start">
+
+        <!-- Icon -->
+        <div class="icon-ap mb-2 mx-auto mx-md-0">
+          <svg width="55" height="28" class="d-md-none" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L3 7v6c0 5 4 9 9 9s9-4 9-9V7l-9-5z" stroke="currentColor" stroke-width="1"/>
+          </svg>
+
+          <svg width="80" height="40" class="d-none d-md-block" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L3 7v6c0 5 4 9 9 9s9-4 9-9V7l-9-5z" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+        </div>
+
+        <!-- Title -->
+        <h5 class="card-ap-title fs-6 fs-md-4">Notre but</h5>
+
+        <!-- Text -->
+         
+        <p class="card-ap-text fs-7 fs-md-5 lh-sm lh-md-base">
+         ASEGUIM, c'est bien plus qu'une association : c'est ton filet de sécurité, ton guide et ta famille loin de chez toi, qui t'accompagne à chaque étape de ton parcours étudiant à Meknès ! On te soutient pour les démarches administratives, ta réussite académique et ton bien-être social, pour que tu te concentres sur tes rêves. Avec nos actions bénévoles et solidaires, on crée un environnement où l'entraide et la réussite collective sont reines. Ici, personne n'est seul face aux défis : quand un étudiant guinéen réussit, c'est toute la communauté qui avance. Ensemble, faisons de ton parcours une histoire de succès ! <br><br> 💪 #ASEGUIM #Grandir#RéussirEnsemble 
+        </p>
+         <br><br>
+        <!-- Button -->
+        <a href="{% url 'Nos_Elites' %}" 
+           class="btn btn-outline-success btn-sm btn-md-lg mx-auto mx-md-0">
+           Voir nos élites
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="col-12 col-md-6">
+    <div class="card-ap h-100 shadow-sm  card-ap-alt">
+      <div class="card-ap d-flex flex-column text-center text-md-start">
+
+        <!-- Icon -->
+        <div class="icon-ap mb-2 mx-auto mx-md-0">
+          <svg width="55" height="28" class="d-md-none" viewBox="0 0 24 24" fill="none">
+            <path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="1"/>
+          </svg>
+
+          <svg width="80" height="40" class="d-none d-md-block" viewBox="0 0 24 24" fill="none">
+            <path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+        </div>
+
+        <!-- Title -->
+        <h5 class="card-ap-title fs-6 fs-md-4">
+          ASEGUIM : L’Étincelle de Ta Vie Étudiante !
+        </h5>
+
+        <!-- Text -->
+        <p class="card-ap-text fs-7 fs-md-5 lh-sm lh-md-base">
+         L’ASEGUIM, c’est bien plus qu’une association : c’est une explosion de souvenirs, de rires et de découvertes qui marquent à vie ! Entre soirées inoubliables, rencontres culturelles vibrantes et moments de partage uniques, chaque étudiant y trouve sa dose d’émerveillement et de complicité. Ici, on apprend, on s’amuse, on crée des liens et on vit des expériences qui transcendent les bancs de la fac. Notre mission ? Faire de chaque instant un souvenir mémorable, tout en cultivant l’ouverture, la créativité et l’esprit d’équipe. <br><br>✨ #ASEGUIM #DesSouvenirsPleinLaTête**
+
+        </p>
+
+        <p class="small text-muted mb-2 fs-8">
+          Rejoins-nous, et fais de tes années étudiantes une épopée dont tu parleras encore dans 20 ans
+        </p>
+
+        <!-- Button -->
+        <a href="{% url 'AncienSG' %}" 
+           class="btn btn-primary btn-sm btn-md-lg mt-auto mx-auto mx-md-0">
+           Nos anciens SG
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+</section>
+
+{% endblock %}
