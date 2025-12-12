@@ -9,6 +9,7 @@ __pycache__/
 # Fichiers de base de données
 db.sqlite3
 
+
 # Fichiers médias (uploads)
 media/
 
